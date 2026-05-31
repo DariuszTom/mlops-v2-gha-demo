@@ -27,5 +27,14 @@ variable "enable_monitoring" {
 }
 
 variable "client_secret" {
-  description = "Service Principal Secret"
+  description = "Service Principal Secret (legacy; not used with OIDC login)"
+  type        = string
+  default     = ""
+  sensitive   = true
+}
+
+variable "github_actions_service_principal_id" {
+  description = "Object ID of the GitHub Actions service principal (passed by reusable workflow)"
+  type        = string
+  default     = ""
 }
