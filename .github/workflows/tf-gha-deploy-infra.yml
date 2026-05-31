@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
 env:
     config_env: 'none'
+permissions:
+  id-token: write
+  contents: read
 jobs:
   get-config:
       uses: Azure/mlops-templates/.github/workflows/read-yaml.yml@main
