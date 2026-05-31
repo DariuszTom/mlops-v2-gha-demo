@@ -1,14 +1,16 @@
 terraform {
-  backend "azurerm" {} 
+  backend "azurerm" {}
   required_providers {
     azurerm = {
-      version = "= 2.99.0"
+      source  = "hashicorp/azurerm"
+      version = "~> 3.117"
     }
   }
 }
 
 provider "azurerm" {
   features {}
+  use_oidc = true
 }
 
 data "azurerm_client_config" "current" {}
