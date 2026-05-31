@@ -8,8 +8,8 @@ variables:
   ap_vm_image: ubuntu-22.04
 
   namespace: mlwopslite #Note: A namespace with many characters will cause storage account creation to fail due to storage account names having a limit of 24 characters.
-  postfix: bzba
-  location: switzerlandnorth 
+  postfix: dtz3
+  location: westus
 # location from 5 available
   environment: prod
   enable_aml_computecluster: true
